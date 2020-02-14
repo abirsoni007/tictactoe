@@ -5,17 +5,26 @@ var secondplayername;
 var ele;
 var winname;
 var i;
-var count;
-
+var count =0;
+var length =9;
 function playerName()
 {
+
+//function call for start game button disable
 disable()
-firstplayername = document.getElementById("fpn").value;
+
+//getting 1st player name
+firstplayername = document.getElementById("fpn").value; 
+
+
+//getting 2st player name
 secondplayername = document.getElementById("spn").value;
 
-
-for (i = 0; i < 9; i++)
+//loop for printing player name with his X or O
+ for (i = 0; i<9; i++)
   {
+
+    //condition check for 1 chance of the player
   if(x==1)
     {
 
@@ -28,11 +37,12 @@ else
     {
 
       document.getElementById("Name").innerHTML= secondplayername;
-      
+     
       x=1;  
     }
   }
 
+//random assign X or O to player
 switch (x) 
   {
   
@@ -41,7 +51,7 @@ switch (x)
     // ele = "X";
     
      ele=document.getElementById("val").innerHTML = "X";
-    
+   
     break;
   
   case 0:
@@ -54,72 +64,114 @@ switch (x)
   }
 }
 
+
 function print(arg)
 {
  
- document.getElementById(arg).innerHTML = ele;
+ document.getElementById(arg).innerHTML = ele;//print the X or O
  
- 
+//function call for check winning or draw condtion
  check()
+
+ //function call to again change the player or his assign element
  playerName();
 
 }
 
-function check(arg) {
- if(arg == 10)
- { 
-
-  draw();
- }
-else 
+function check(arg)
 {
+    count++; 
+ if(count==9) 
+  {
+    draw();
+  }
   
-
-  var a1 = document.getElementById("1").innerHTML;
-  var a2 = document.getElementById("2").innerHTML;
-  var a3 = document.getElementById("3").innerHTML;
-  if(a1==a2 && a2==a3 && a3=="X")
-  {
-    winner(a1)
+ else 
+  { 
+    // take value from tictactoe.html
+    var c1 = document.getElementById("1").innerHTML;
+    var c2 = document.getElementById("2").innerHTML;
+    var c3 = document.getElementById("3").innerHTML;
+    var c4 = document.getElementById("4").innerHTML;
+    var c5 = document.getElementById("5").innerHTML;
+    var c6 = document.getElementById("6").innerHTML;
+    var c7 = document.getElementById("7").innerHTML;
+    var c8 = document.getElementById("8").innerHTML;
+    var c9 = document.getElementById("9").innerHTML;
     
-  }
-  var b1 = document.getElementById("1").innerHTML;
-  var b2 = document.getElementById("4").innerHTML;
-  var b3 = document.getElementById("7").innerHTML;
-  if (b1==b2 && b2==b3 && b3=="X") 
-  {
-    winner(b1)
-  }
-  var c1 = document.getElementById("1").innerHTML;
-  var c2 = document.getElementById("5").innerHTML;
-  var c3 = document.getElementById("9").innerHTML;
-  if (c1==c2 && c2==c3 && c3=="X") 
-  {
-    winner(c1)
-  }
+    //condtion for X
 
-  var d1 = document.getElementById("1").innerHTML;
-  var d2 = document.getElementById("2").innerHTML;
-  var d3 = document.getElementById("3").innerHTML;
-  if(d1==d2 && d2==d3 && d3=="O")
-  {
-    winner(d1)
+    if(c1==c2 && c2==c3 && c3=="X")
+      {
+        winner(c3)
+        
+      }
+     else if (c1==c4 && c4==c7 && c7=="X") 
+      {
+        winner(c1)
+      }
+    
+    else if (c1==c5 && c5==c9 && c9=="X") 
+      {
+        winner(c1)
+      }
+    else if (c2==c5 && c5==c8 && c8=="X") 
+      {
+        winner(c2)
+      }
+    else if (c3==c6 && c6==c9 && c9=="X") 
+      {
+        winner(c3)
+      }
+    else if (c4==c5 && c5==c6 && c6=="X") 
+      {
+        winner(c4)
+      }
+    else if (c7==c5 && c5==c3 && c3=="X") 
+      {
+        winner(c7)
+      }
+    else if (c7==c8 && c8==c9 && c9=="X") 
+      {
+        winner(c7)
+      }
+      //condition for O
+    else if(c1==c2 && c2==c3 && c3=="O")
+      {
+        winner(c3)
+        
+      }
+     else if (c1==c4 && c4==c7 && c7=="O") 
+      {
+        winner(c1)
+      }
+    
+    else if (c1==c5 && c5==c9 && c9=="O") 
+      {
+        winner(c1)
+      }
+    else if (c2==c5 && c5==c8 && c8=="O") 
+      {
+        winner(c2)
+      }
+    else if (c3==c6 && c6==c9 && c9=="O") 
+      {
+        winner(c3)
+      }
+    else if (c4==c5 && c5==c6 && c6=="O") 
+      {
+        winner(c4)
+      }
+    else if (c7==c5 && c5==c3 && c3=="O") 
+      {
+        winner(c7)
+      }
+    else if (c7==c8 && c8==c9 && c9=="O") 
+      {
+        winner(c7)
+      }
+     
   }
-  var e1 = document.getElementById("1").innerHTML;
-  var e2 = document.getElementById("4").innerHTML;
-  var e3 = document.getElementById("7").innerHTML;
-  if (e1==e2 && e2==e3 && e3=="O") 
-  {
-    winner(e1)
-  }
-  var f1 = document.getElementById("1").innerHTML;
-  var f2 = document.getElementById("5").innerHTML;
-  var f3 = document.getElementById("9").innerHTML;
-  if (f1==f2 && f2==f3 && f3=="O") 
-  {
-    winner(f1)
-  }
-}
 }
 
 function draw()
@@ -132,10 +184,13 @@ function draw()
 function winner(a1)
 {
 
-document.getElementById("win").innerHTML = "WINNER " + a1;
+  document.getElementById("win").innerHTML = "WINNER IS " + a1;
 
 }
+
 function disable()
 {
+ 
   document.getElementById("sbtn").disabled = true;
+
 }
