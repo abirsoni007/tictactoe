@@ -80,15 +80,8 @@ function print(arg)
 
 function check(arg)
 {
-    count++; 
- if(count==9) 
-  {
-    draw();
-  }
-  
- else 
-  { 
     // take value from tictactoe.html
+   
     var c1 = document.getElementById("1").innerHTML;
     var c2 = document.getElementById("2").innerHTML;
     var c3 = document.getElementById("3").innerHTML;
@@ -99,78 +92,157 @@ function check(arg)
     var c8 = document.getElementById("8").innerHTML;
     var c9 = document.getElementById("9").innerHTML;
     
-    //condtion for X
-
+    count++; 
+ if(count==9) 
+  {
     if(c1==c2 && c2==c3 && c3=="X")
       {
-        winner(c3)
+        winner(c1);
         
       }
      else if (c1==c4 && c4==c7 && c7=="X") 
       {
-        winner(c1)
+        winner(c1);
       }
     
     else if (c1==c5 && c5==c9 && c9=="X") 
       {
-        winner(c1)
+        winner(c1);
       }
     else if (c2==c5 && c5==c8 && c8=="X") 
       {
-        winner(c2)
+        winner(c2);
       }
     else if (c3==c6 && c6==c9 && c9=="X") 
       {
-        winner(c3)
+        winner(c3);
       }
     else if (c4==c5 && c5==c6 && c6=="X") 
       {
-        winner(c4)
+        winner(c4);
       }
     else if (c7==c5 && c5==c3 && c3=="X") 
       {
-        winner(c7)
+        winner(c7);
       }
     else if (c7==c8 && c8==c9 && c9=="X") 
       {
-        winner(c7)
+        winner(c7);
       }
       //condition for O
     else if(c1==c2 && c2==c3 && c3=="O")
       {
-        winner(c3)
+        winner(c3);
         
       }
      else if (c1==c4 && c4==c7 && c7=="O") 
       {
-        winner(c1)
+        winner(c1);
       }
     
     else if (c1==c5 && c5==c9 && c9=="O") 
       {
-        winner(c1)
+        winner(c1);
       }
     else if (c2==c5 && c5==c8 && c8=="O") 
       {
-        winner(c2)
+        winner(c2);
       }
     else if (c3==c6 && c6==c9 && c9=="O") 
       {
-        winner(c3)
+        winner(c3);
       }
     else if (c4==c5 && c5==c6 && c6=="O") 
       {
-        winner(c4)
+        winner(c4);
       }
     else if (c7==c5 && c5==c3 && c3=="O") 
       {
-        winner(c7)
+        winner(c7);
       }
     else if (c7==c8 && c8==c9 && c9=="O") 
       {
-        winner(c7)
+        winner(c7);
       }
-     
+    else
+    {
+      draw();
+    }
+  }
+  
+ else 
+  { 
+    //condtion for X
+
+    if(c1==c2 && c2==c3 && c3=="X")
+      {
+        winner(c1);
+        
+      }
+     else if (c1==c4 && c4==c7 && c7=="X") 
+      {
+        winner(c1);
+      }
+    
+    else if (c1==c5 && c5==c9 && c9=="X") 
+      {
+        winner(c1);
+      }
+    else if (c2==c5 && c5==c8 && c8=="X") 
+      {
+        winner(c2);
+      }
+    else if (c3==c6 && c6==c9 && c9=="X") 
+      {
+        winner(c3);
+      }
+    else if (c4==c5 && c5==c6 && c6=="X") 
+      {
+        winner(c4);
+      }
+    else if (c7==c5 && c5==c3 && c3=="X") 
+      {
+        winner(c7);
+      }
+    else if (c7==c8 && c8==c9 && c9=="X") 
+      {
+        winner(c7);
+      }
+      //condition for O
+    else if(c1==c2 && c2==c3 && c3=="O")
+      {
+        winner(c3);
+        
+      }
+     else if (c1==c4 && c4==c7 && c7=="O") 
+      {
+        winner(c1);
+      }
+    
+    else if (c1==c5 && c5==c9 && c9=="O") 
+      {
+        winner(c1);
+      }
+    else if (c2==c5 && c5==c8 && c8=="O") 
+      {
+        winner(c2);
+      }
+    else if (c3==c6 && c6==c9 && c9=="O") 
+      {
+        winner(c3);
+      }
+    else if (c4==c5 && c5==c6 && c6=="O") 
+      {
+        winner(c4);
+      }
+    else if (c7==c5 && c5==c3 && c3=="O") 
+      {
+        winner(c7);
+      }
+    else if (c7==c8 && c8==c9 && c9=="O") 
+      {
+        winner(c7);
+      } 
   }
 }
 
