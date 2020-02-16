@@ -36,6 +36,10 @@ table
     border-top: 3px solid gray;
     border-bottom: 3px solid gray;
   }
+  .Dglow
+{
+  display:none;
+}
 /*.button
 {
   background-color: #99c2ff;

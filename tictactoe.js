@@ -9,7 +9,7 @@ var count =0;
 var length =9;
 function playerName()
 {
-
+dis();
 //function call for start game button disable
 disable()
 
@@ -71,10 +71,15 @@ function print(arg)
  document.getElementById(arg).innerHTML = ele;//print the X or O
  
 //function call for check winning or draw condtion
- check()
+ check();
+
+ // button disable after click
+ btnDisable(arg);
+
 
  //function call to again change the player or his assign element
  playerName();
+
 
 }
 
@@ -266,3 +271,16 @@ function disable()
   document.getElementById("sbtn").disabled = true;
 
 }
+function btnDisable(arg)
+{
+  document.getElementById(arg).disabled = true;
+
+}
+function dis() {
+  
+  document.getElementById("show").style.display = 'block';
+
+}
+// function resetForm() {
+//     document.getElementById("show").reset();
+// }
