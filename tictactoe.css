@@ -1,43 +1,37 @@
-body
-  {
-    background-color: #f2f2f2;
-  }
+body{
+  background-color: #f2f2f2;
+}
 
-p
-  {
-    color: blue;
-    text-align: center; 
-  }
+p{
+  color: blue;
+  text-align: center; 
+}
 
-td 
-  {
+td{
     width: 100px;
     height: 100px;
-  }
+}
 
-table 
-  {
+table{
     margin-top: 60px ;
     margin-left: 25%;
-  }
+}
 /*.para{ 
  
   color:blue;
   font-size: 50px;
 }*/
-.vl 
-  {
+.vl{
     border-left: 3px solid gray;
     border-right: 3px solid gray;
-  }
+}
 
-.hl 
-  {
+.hl{
     border-top: 3px solid gray;
     border-bottom: 3px solid gray;
-  }
-  .Dglow
-{
+}
+
+.Dglow{
   display:none;
 }
 /*.button
@@ -47,5 +41,3 @@ table
   text-align: center;
   font-size: 16px;
 }*/
-
-

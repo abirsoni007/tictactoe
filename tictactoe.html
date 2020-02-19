@@ -1,32 +1,37 @@
 <!DOCTYPE html>
 <html>
+  
   <head>
+    
     <title>tic tac toe</title>
+    
     <link rel="stylesheet" type="text/css" href="tictactoe.css">
-      <script src="tictactoe.js">
+      
+    <script src="tictactoe.js"></script>
 
-      </script>
+      
   </head>
 <body >
   <form>
 
-      <label for ="fpn">First Player Name</label><br>
+    <label for ="fpn">First Player Name</label><br>
       
-      <input type="text" id="fpn" value="p1">
+    <input type="text" id="fpn" value="p1">
 
   <br>
       
-      <label for ="spn">Second Player Name</label><br>
+    <label for ="spn">Second Player Name</label><br>
       
       <input type="text" id="spn" value="p2">
 
-    <br>
-    <br>
-      <button type="button" id="sbtn" onclick="playerName();">Start Game</button>
+  <br>
+  <br>
+      <button type="button" id="startbutton" onclick="playerName()">Start Game</button>
 
 </form>
  
- <div id= "show" class="Dglow">
+<div id= "showgamegrid" class="Dglow">
+  
   <p>Chance of Player  
     
     <span id = "Name" >
@@ -37,48 +42,47 @@
        
      </span>
    </p>
-  <!-- <p>value is <span id= "val"></span></p1>
- --> 
 
-<p id="dr"></p>
-<p id= "win"></p>
+
+<p id="draw"></p>
+
+<p id= "winner"></p>
+
 
 <table >
  
   <tr>
     
-    <td><button id="1" onclick="print(1)"></button><!-- <p id ="1"> --></p></td>
+    <td><button id="1" onclick="print(1)" ></button></p></td>
       
-      <td class="vl"><button id ="2"onclick="print(2)"></button><!-- <p id ="2"> --></td>
+      <td class="vl"><button id ="2" onclick="print(2)"></button></td>
     
-    <td><button id="3" onclick="print(3)"></button><!-- <p id ="3"> --></td>
+    <td><button id="3" onclick="print(3)"></button></td>
   
   </tr>
   
   <tr>
 
-    <td class="hl"><button id="4" onclick="print(4)"></button><!-- <p id ="4"> --></td>
+    <td class="hl"><button id="4" onclick="print(4)"></button></td>
      
-      <td class="vl hl"><button id="5" onclick="print(5)"></button><!-- <p id ="5"> --></td>
+      <td class="vl hl"><button id="5" onclick="print(5)"></button></td>
    
-    <td class="hl"><button id="6" onclick="print(6)"></button><!-- <p id ="6"> --></td>
+    <td class="hl"><button id="6" onclick="print(6) "></button></td>
  
   </tr>
 
   <tr>
   
-    <td><button id ="7" onclick="print(7)"></button><!-- <p id ="7"> --></td>
+    <td><button id ="7" onclick="print(7)"></button></td>
     
-      <td class="vl"><button id ="8" onclick="print(8)"></button><!-- <p id ="8"> --></td>
+      <td class="vl"><button id ="8" onclick="print(8)"></button></td>
    
-    <td><button id="9" onclick="print(9)"></button><!-- <p id ="9"> --></td>
+    <td><button id="9" onclick="print(9)"></button></td>
   
   </tr>
 
 </table>
 <br>
-    <!-- <button type="button" onclick="resetForm();">Reset</button>
- -->
 </div>
 </body>
 </html>
