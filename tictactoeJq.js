@@ -10,7 +10,7 @@ function playerName(){
   $("#startbutton").click(function(){
       firstplayername = $("#fpn").val();
       secondplayername = $("#spn").val();
-       
+      startButtonDisable();       
     });
 
   for (i = 0; i<3; i++){
@@ -45,6 +45,15 @@ var i = buttonId;
 debugger
   // //print the X or O
   // document.getElementById(buttonId).innerHTML = ele;
-     $("#"+buttonId).html(ele);
-     playerName()
-   }
+$("#"+buttonId).html(ele);
+     playerName();
+     gameButtonDisable(buttonId);
+}
+
+function startButtonDisable(){
+$("#startbutton").attr("disabled", true);
+}
+
+function gameButtonDisable(buttonId){
+ $("#"+ buttonId).attr("disabled", true); 
+}
