@@ -1,90 +1,113 @@
 <!DOCTYPE html>
 <html>
   
-  <head>
-    
-    <title>tic tac toe</title>
-    
-    <link rel="stylesheet" type="text/css" href="tictactoe.css">
-    
-    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js">
-    </script>
-    <script src="tictactoeJq.js"></script>
-
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>tic tac toe</title>
       
-  </head>
-<body >
-  <form>
-
-    <label for ="fpn">First Player Name</label><br>
+      <link rel="stylesheet" type="text/css" href="tictactoe.css">
       
-    <input type="text" id="fpn" value="p1">
+      <script src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js">
+      </script>
+      <script src="tictactoeJq.js"></script>
+    </head>
+    <body >
+        <form>
 
-  <br>
-      
-    <label for ="spn">Second Player Name</label><br>
-      
-      <input type="text" id="spn" value="p2">
+            <label for ="fpn">First Player Name
+            </label>
+          <br>
+            
+            <input type="text" id="fpn" value="p1">
+            </input>
 
-  <br>
-  <br>
-      <button type="button" id="startbutton" onclick= "assign()">Start Game</button>
+          <br>
+            
+            <label for ="spn">Second Player Name
+            </label>
+          <br>
+            
+            <input type="text" id="spn" value="p2">
 
-</form>
- 
-<!-- <div id= "showgamegrid" class="Dglow"> -->
-  
-  <p>Chance of Player  
-    
-    <span id = "Name" >
-      
-    </span>
+          <br>
+          <br>
+            <button type="button" id="startbutton" onclick= "assign()">Start Game
+            </button>
+
+        </form>
      
-     and value is  <span id= "val">
+    <!-- <div id= "showgamegrid" class="Dglow"> -->
+      
+        <p>Chance of Player  
+          <span id ="name" >
+          </span>
+          and value is  
+          <span id="val">
+          </span>
+        </p>
+
+      <table align="center">
        
-     </span>
-   </p>
+        <tr>
+          
+          <td>
+            <button class = "button"  id="1" onclick="print(1)">
+            </button> 
+          </td>
+            
+            <td class="vl">
+              <button class = "button" id ="2" onclick="print(2)">
+              </button>
+            </td>
+          
+          <td>
+              <button class = "button" id="3" onclick="print(3)">
+              </button>
+          </td>
+        
+        </tr>
+        
+        <tr>
 
+          <td class="hl">
+              <button class = "button" id="4" onclick="print(4)" >
+              </button>
+          </td>
+           
+          <td class="vl hl">
+              <button class = "button"  id="5" onclick="print(5)">
+              </button>
+          </td>
+         
+          <td class="hl">
+              <button class = "button" id="6" onclick="print(6)">
+              </button>
+          </td>
+       
+        </tr>
 
-<p id="draw"></p>
+        <tr>
+        
+          <td>
+              <button class = "button" id ="7" onclick="print(7)">
+              </button>
+          </td>
+          
+          <td class="vl">
+              <button class = "button" id ="8" onclick="print(8)">
+              </button>
+          </td>
+         
+          <td>
+              <button class = "button" id="9" onclick="print(9)">
+              </button>
+          </td>
+        
+        </tr>
 
-<p id= "winner"></p>
-
-
-<table align="center">
- 
-  <tr>
-    
-    <td><button id="1" onclick="print(1)"></button> </td>
-      
-      <td class="vl"><button id ="2" onclick="print(2)"></button></td>
-    
-    <td><button id="3" onclick="print(3)"></button></td>
-  
-  </tr>
-  
-  <tr>
-
-    <td class="hl"><button id="4" onclick="print(4)" ></button></td>
-     
-      <td class="vl hl"><button id="5" onclick="print(5)"></button></td>
-   
-    <td class="hl"><button id="6" onclick="print(6)"></button></td>
- 
-  </tr>
-
-  <tr>
-  
-    <td><button id ="7" onclick="print(7)"></button></td>
-    
-      <td class="vl"><button id ="8" onclick="print(8)"></button></td>
-   
-    <td><button id="9" onclick="print(9)"></button></td>
-  
-  </tr>
-
-</table>
-<br>
-</div>
-</body>
+      </table>
+      <br>
+  <!-- </div> -->
+    </body>
 </html>

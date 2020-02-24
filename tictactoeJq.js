@@ -1,5 +1,6 @@
 var x1=Math.random();
 var x =Math.round(x1);
+debugger
 var firstplayername;
 var secondplayername;
 var ele;
@@ -15,45 +16,45 @@ $(document).ready(function(){
   });
  
 });
+
 function assign(){
 
    startButtonDisable();
-  for (i = 0; i<3; i++){
-
+  for (i = 0; i<=2; i++){
+ debugger
     if(x==1){
       
-      $("#Name").html(firstplayername);
+      $("#name").html(firstplayername);
       x=0;
     }else{
       
-      $("#Name").html(secondplayername);
+      $("#name").html(secondplayername);
       x=1;  
     }
-  }
+}
    switch (x){
   
     case 1:
       ele = "X";
       $("#val").html(ele);
+      $("#name").html(firstplayername);
       break;    
     case 0:
       ele = "O";
        
       $("#val").html(ele);
+      $("#name").html(secondplayername);
       break;
    }
 
 }
 
-
 function print(buttonId){
  
   $("#"+buttonId).html(ele);
-    
-    assign();
-    gameButtonDisable(buttonId);
     checkWinner();
-    
+    gameButtonDisable(buttonId);
+    assign();
     
 }
 
@@ -62,7 +63,7 @@ function startButtonDisable(){
 }
 
 function gameButtonDisable(buttonId){
- $("#"+buttonId).attr("disabled", true); 
+  $("#"+buttonId).attr("disabled", true); 
 }
 
 function checkWinner(){
@@ -100,7 +101,6 @@ function checkWinner(){
         winner(c3);
     }
     else if (c7==c8 && c8==c9 && c9== "X"){
-     
         winner(c9);
     }
     else if (c1==c2 && c2==c3 && c3== "O"){
@@ -138,7 +138,7 @@ function draw(){
 }
 
  function winner(winner){
-  // $("#draw").html("Winner "+winner);
-   alert("winner "+winner);
+
+   alert("winner "+winner );
    location.reload();
 }
