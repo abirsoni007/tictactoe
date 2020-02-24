@@ -6,23 +6,16 @@ var ele;
 var count=0;
 
 $(document).ready(function(){
-  debugger
+  
   $("#startbutton").click(function(){
       firstplayername = $("#fpn").val();
       secondplayername = $("#spn").val();
 
              
-    });
+  });
  
 });
-
-// function playerName(){
-//     firstplayername = $("#fpn").val();
-//     secondplayername = $("#spn").val();
-//     startButtonDisable();
-// // }
-
- function assign(){
+function assign(){
 
    startButtonDisable();
   for (i = 0; i<3; i++){
@@ -49,14 +42,14 @@ $(document).ready(function(){
       $("#val").html(ele);
       break;
    }
-   
+
 }
 
 
 function print(buttonId){
-  debugger
+ 
   $("#"+buttonId).html(ele);
-    // playerName();
+    
     assign();
     gameButtonDisable(buttonId);
     checkWinner();
@@ -73,7 +66,7 @@ function gameButtonDisable(buttonId){
 }
 
 function checkWinner(){
-    debugger
+  
   var c1 = $("#1").text();
   var c2 = $("#2").text();
   var c3 = $("#3").text();
@@ -84,7 +77,7 @@ function checkWinner(){
   var c8 = $("#8").text();
   var c9 = $("#9").text();
   count++;
-  debugger
+  
     if (c1==c2 && c2==c3 && c3== "X"){
         winner(c3);
     }
@@ -139,7 +132,7 @@ function checkWinner(){
       draw();
     }
 }
-debugger
+
 function draw(){
   $("#draw").html("MATCH DRAW");
 }
