@@ -76,7 +76,72 @@ function checkWinner(){
   var c9 = document.getElementById("9").innerHTML;
     
   count++; 
- 
+  // if(count==9){
+  //   if(c1==c2 && c2==c3){
+  //      winner(c1);
+  //   }
+  //   else if (c1==c4 && c4==c7){
+  //       winner(c1);
+  //   }
+  //   else if (c1==c5 && c5==c9){
+  //       winner(c1);
+  //   }
+  //   else if (c2==c5 && c5==c8){
+  //       winner(c2);
+  //   }
+  //   else if (c3==c6 && c6==c9){
+  //       winner(c3);
+  //   }
+  //   else if (c4==c5 && c5==c6){
+  //       winner(c4);
+  //   }
+  //   else if (c7==c5 && c5==c3){
+  //       winner(c7);
+  //   }
+  //   else if (c7==c8 && c8==c9){
+  //       winner("winner" + c7);
+  //   }
+  //     //condition for O
+  //   else if(c1==c2 && c2==c3 && c3=="O")
+  //     {
+  //       winner(c3);
+        
+  //     }
+  //    else if (c1==c4 && c4==c7 && c7=="O") 
+  //     {
+  //       winner(c1);
+  //     }
+    
+  //   else if (c1==c5 && c5==c9 && c9=="O") 
+  //     {
+  //       winner(c1);
+  //     }
+  //   else if (c2==c5 && c5==c8 && c8=="O") 
+  //     {
+  //       winner(c2);
+  //     }
+  //   else if (c3==c6 && c6==c9 && c9=="O") 
+  //     {
+  //       winner(c3);
+  //     }
+  //   else if (c4==c5 && c5==c6 && c6=="O") 
+  //     {
+  //       winner(c4);
+  //     }
+  //   else if (c7==c5 && c5==c3 && c3=="O") 
+  //     {
+  //       winner(c7);
+  //     }
+  //   else if (c7==c8 && c8==c9 && c9=="O") 
+  //     {
+  //       winner(c7);
+  //     }
+  //   else{
+  //     draw();
+  //   }
+  // }else{ 
+  //   //condtion for X
+
     if(c1==c2 && c2==c3){
        winner(c1);
     }
@@ -104,6 +169,41 @@ function checkWinner(){
     else if(count==9){
       draw();
     }
+    //   //condition for O
+    // else if(c1==c2 && c2==c3 && c3=="O")
+    //   {
+    //     winner(c3);
+        
+    //   }
+    //  else if (c1==c4 && c4==c7 && c7=="O") 
+    //   {
+    //     winner(c1);
+    //   }
+    
+    // else if (c1==c5 && c5==c9 && c9=="O") 
+    //   {
+    //     winner(c1);
+    //   }
+    // else if (c2==c5 && c5==c8 && c8=="O") 
+    //   {
+    //     winner(c2);
+    //   }
+    // else if (c3==c6 && c6==c9 && c9=="O") 
+    //   {
+    //     winner(c3);
+    //   }
+    // else if (c4==c5 && c5==c6 && c6=="O") 
+    //   {
+    //     winner(c4);
+    //   }
+    // else if (c7==c5 && c5==c3 && c3=="O") 
+    //   {
+    //     winner(c7);
+    //   }
+    // else if (c7==c8 && c8==c9 && c9=="O") 
+    //   {
+    //     winner(c7);
+    //   } 
   
 }
 
@@ -115,6 +215,7 @@ function draw(){
 function winner(winner){
 
   document.getElementById("winner").innerHTML =  winner;
+  location.reload();
 }
 
 function startButtondisable(){

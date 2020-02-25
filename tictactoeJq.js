@@ -10,18 +10,15 @@ $(document).ready(function(){
   
   $("#startbutton").click(function(){
       firstplayername = $("#fpn").val();
-      secondplayername = $("#spn").val();
-
-             
-  });
- 
+      secondplayername = $("#spn").val();         
+  }); 
 });
 
 function assign(){
 
-   startButtonDisable();
+  startButtonDisable();
   for (i = 0; i<=2; i++){
- debugger
+ 
     if(x==1){
       
       $("#name").html(firstplayername);
@@ -31,23 +28,23 @@ function assign(){
       $("#name").html(secondplayername);
       x=1;  
     }
-}
+
    switch (x){
   
     case 1:
       ele = "X";
       $("#val").html(ele);
-      $("#name").html(firstplayername);
+     
       break;    
     case 0:
       ele = "O";
        
       $("#val").html(ele);
-      $("#name").html(secondplayername);
+      
       break;
    }
 
-}
+}}
 
 function print(buttonId){
  
